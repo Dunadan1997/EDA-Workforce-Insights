@@ -272,7 +272,7 @@ merged_data_shp$optimism_group <-
 
 # Exploratory Data Analysis -----------------------------------------------
 
-# These 3 plots show that most people report changing employer in Q3, espeically in August and September
+# These 3 plots show that most people report changing employer in Q3, especially in August and September
 merged_data_shp %>% 
   filter(type_change == "changed job" & !is.na(attrition_month_fct) & !is.na(type_reason)) %>%
   group_by(type_reason, attrition_month_fct) %>% count() %>% 
